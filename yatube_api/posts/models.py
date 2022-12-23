@@ -10,7 +10,7 @@ class Group(models.Model):
     description = models.TextField()
 
     def __str__(self):
-        return self.title
+        return self.title[:15]
 
 
 class Post(models.Model):
@@ -30,7 +30,7 @@ class Post(models.Model):
     )
 
     def __str__(self):
-        return self.text
+        return [self.text[:15], self.pub_date, self.author, self.group]
 
 
 class Comment(models.Model):
