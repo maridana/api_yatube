@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404
 from rest_framework import permissions
 from rest_framework import viewsets
 
-from posts.models import Group, Post, Comment
+from posts.models import Group, Post
 from .permissions import IsAuthorOrReadOnly
 from .serializers import (CommentSerializer,
                           GroupSerializer, PostSerializer)
@@ -37,4 +37,3 @@ class CommentViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user, post=self.get_post())
-    
