@@ -9,11 +9,11 @@ v1_router = DefaultRouter()
 
 v1_router.register('posts', PostViewSet, basename='posts')
 v1_router.register(r'posts/(?P<post_id>\d+)/comments', CommentViewSet,
-                    basename='comments')
+            basename='comments')
 v1_router.register('groups', GroupViewSet, basename='groups')
 
 
 urlpatterns = [
     path('v1/', include(v1_router.urls)),
-    path('v1/api-token-auth/', views.obtain_auth_token), 
+    path('v1/api-token-auth/', views.obtain_auth_token),
 ]
