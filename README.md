@@ -67,10 +67,9 @@ python yatube_api/manage.py createsuperuser
 Запустить проект:
 
 ```bash
-python yatube_api/manage.py runserver localhost:80
+python yatube_api/manage.py runserver
 ```
 
-После чего проект будет доступен по адресу http://localhost/
+Ваш проект запустится на http://127.0.0.1:8000/
 
-Зайти в http://localhost/admin и создать посты, группы, комментарии.
-Тестировать и добавлять данные удобно после прохождения авторизации через Postman.
+С помощью команды pytest можно запустить тесты и проверить работу модулей.
